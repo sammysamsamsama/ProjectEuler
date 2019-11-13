@@ -1,0 +1,19 @@
+v_product: 1651104
+	(0, 0)
+v_product: 6414210
+	(0, 2)
+v_product: 6514520
+	(0, 3)
+d_product: 11587200
+	(0, 7)
+d_product: 16194745
+	(1, 0)
+v_product: 25723980
+	(1, 5)
+d_product: 32719995
+	(2, 1)
+v_product: 51267216
+	(6, 15)
+d_product: 70600674
+	(15, 3)
+Greatest product of four adjacent numbers: 70600674
