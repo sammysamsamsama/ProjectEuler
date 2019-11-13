@@ -1,0 +1,6 @@
+#!/bin/bash
+# Copy to next problem
+
+cp -r $1 $2
+mv $2/$1.cpp $2/$2.cpp
+sed -i "s/$1/$2/g" $2/Makefile
