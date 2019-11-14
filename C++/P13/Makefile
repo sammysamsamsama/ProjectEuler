@@ -11,5 +11,5 @@ solution: P13.cpp
 	 $(CXX) $(CXXFLAGS) P13.cpp -o solution
 
 clean:
-	-rm -f *.o *.gch *~ a.out solution *.txt
+	-rm -f *.o *.gch *~ a.out solution result.txt
 
