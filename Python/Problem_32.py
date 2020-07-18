@@ -12,8 +12,8 @@
 # HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 
 
-def is_pandigital(num, n=9):
-    return sorted(str(num)) == [str(d) for d in range(1, min(10, n + 1))]
+def is_pandigital(num, n_min=1, n_max=9):
+    return sorted(str(num)) == [str(d) for d in range(n_min, min(10, n_max + 1))]
 
 
 if __name__ == '__main__':

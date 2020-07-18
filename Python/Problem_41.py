@@ -13,7 +13,7 @@ largest_n_digit_pandigital_prime = 1
 # remember that if the sum of a number's digits is divisible by 3, the number is also divisible by 3
 n = 7654321
 while largest_n_digit_pandigital_prime == 1:
-    if is_prime(n) and is_pandigital(n, len(str(n))):
+    if is_prime(n) and is_pandigital(n, n_max=len(str(n))):
         print(n, "is prime and is a {}-digit pandigital".format(len(str(n))))
         largest_n_digit_pandigital_prime = n
         break
