@@ -14,13 +14,18 @@ def pentagonal_number(n):
     return int(n * (3 * n - 1) / 2)
 
 
-pentagonal_numbers = [pentagonal_number(n) for n in range(1, 10000)]
-for i in range(0, 9999):
-    for j in range(i + 1, 9999):
-        if pentagonal_numbers[j] - pentagonal_numbers[i] in pentagonal_numbers and pentagonal_numbers[j] + \
-                pentagonal_numbers[i] in pentagonal_numbers:
-            print("{} + {} = {}".format(pentagonal_numbers[j], pentagonal_numbers[i],
-                                        pentagonal_numbers[j] + pentagonal_numbers[i]))
-            print("{} - {} = {}".format(pentagonal_numbers[j], pentagonal_numbers[i],
-                                        pentagonal_numbers[j] - pentagonal_numbers[i]))
+if __name__ == '__main__':
+    pentagonal_numbers = [pentagonal_number(n) for n in range(1, 10000)]
+    answer_found = False
+    for i in range(0, 9999):
+        if answer_found:
             break
+        for j in range(i + 1, 9999):
+            if pentagonal_numbers[j] - pentagonal_numbers[i] in pentagonal_numbers and pentagonal_numbers[j] + \
+                    pentagonal_numbers[i] in pentagonal_numbers:
+                print("{} + {} = {}".format(pentagonal_numbers[j], pentagonal_numbers[i],
+                                            pentagonal_numbers[j] + pentagonal_numbers[i]))
+                print("{} - {} = {}".format(pentagonal_numbers[j], pentagonal_numbers[i],
+                                            pentagonal_numbers[j] - pentagonal_numbers[i]))
+                answer_found = True
+                break
