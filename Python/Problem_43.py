@@ -16,8 +16,6 @@
 
 from Problem_32 import is_pandigital
 
-pandigital_sum = 0
-
 
 def permutations(lst):
     if len(lst) == 0:
@@ -33,27 +31,29 @@ def permutations(lst):
     return l
 
 
-for p in permutations(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']):
-    if p[0] == '0':
-        continue
-    n = 0
-    for m in p:
-        n = n * 10 + int(m)
-    if is_pandigital(n, 0, 9):
-        if int(str(n)[1:4]) % 2 != 0:
+if __name__ == '__main__':
+    pandigital_sum = 0
+    for p in permutations(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']):
+        if p[0] == '0':
             continue
-        if int(str(n)[2:5]) % 3 != 0:
-            continue
-        if int(str(n)[3:6]) % 5 != 0:
-            continue
-        if int(str(n)[4:7]) % 7 != 0:
-            continue
-        if int(str(n)[5:8]) % 11 != 0:
-            continue
-        if int(str(n)[6:9]) % 13 != 0:
-            continue
-        if int(str(n)[7:]) % 17 != 0:
-            continue
-        pandigital_sum += n
-        print(n)
-print("sum:", pandigital_sum)
+        n = 0
+        for m in p:
+            n = n * 10 + int(m)
+        if is_pandigital(n, 0, 9):
+            if int(str(n)[1:4]) % 2 != 0:
+                continue
+            if int(str(n)[2:5]) % 3 != 0:
+                continue
+            if int(str(n)[3:6]) % 5 != 0:
+                continue
+            if int(str(n)[4:7]) % 7 != 0:
+                continue
+            if int(str(n)[5:8]) % 11 != 0:
+                continue
+            if int(str(n)[6:9]) % 13 != 0:
+                continue
+            if int(str(n)[7:]) % 17 != 0:
+                continue
+            pandigital_sum += n
+            print(n)
+    print("sum:", pandigital_sum)
