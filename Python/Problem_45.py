@@ -34,4 +34,3 @@ if __name__ == '__main__':
             print(N)
             break
         n += 1
-
